@@ -89,7 +89,8 @@ class UnitPay
         '178.132.203.105',
         '52.29.152.23',
         '52.19.56.234',
-        '127.0.0.1' // for debug
+        '127.0.0.1', // for debug
+        '46.229.182.144' //for test
     );
 
     private $secretKey;
