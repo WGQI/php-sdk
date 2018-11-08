@@ -265,12 +265,12 @@ class UnitPay
             $requestUrl .= '$params['.$key.']='.$value;
         }
 
-        $response = json_decode(file_get_contents($requestUrl));
+   /*     $response = json_decode(file_get_contents($requestUrl));
         if (!is_object($response)) {
             throw new InvalidArgumentException('Temporary server error. Please try again later.');
-        }
+        }*/
 
-        return $response;
+        return $requestUrl;
     }
 
     /**
