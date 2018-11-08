@@ -324,7 +324,8 @@ class UnitPay
     {
         return json_encode(array(
             "result" => array(
-                "message" => $message
+                "message" => $message,
+                "status" => "success"
             )
         ));
     }
