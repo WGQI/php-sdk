@@ -260,10 +260,10 @@ class UnitPay
             throw new InvalidArgumentException('SecretKey is null');
         }
 
-        $requestUrl = self::API_URL . '?' . http_build_query([
-            'method' => $method,
-            'params' => $params
-        ], null, '&', PHP_QUERY_RFC3986);
+        $requestUrl = self::API_URL . '?method='.$method;
+        foreach($params as $key => $value){
+            $requestUrl .= '$params['.$key.']='.$value;
+        }
 
         $response = json_decode(file_get_contents($requestUrl));
         if (!is_object($response)) {
